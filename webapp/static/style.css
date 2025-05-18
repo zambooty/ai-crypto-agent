@@ -1,0 +1,97 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e; /* Dark blue-ish background */
+    color: #e0e0e0; /* Light text color */
+}
+
+header {
+    background: linear-gradient(90deg, #162238 0%, #1a1a2e 100%); /* Subtle gradient */
+    color: #fff;
+    padding: 1.5rem 1rem; /* Increased padding */
+    text-align: center;
+    border-bottom: 1px solid #2a2a3f; /* Border for definition */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem; /* Larger title */
+    font-weight: 600;
+}
+
+main {
+    padding: 2rem; /* Increased padding */
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+section {
+    background: #232336; /* Slightly lighter section background */
+    margin-bottom: 1.5rem; /* Increased margin */
+    padding: 1.5rem; /* Increased padding */
+    border-radius: 8px; /* Softer corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+section h2 {
+    color: #e0e0e0; /* Light text for headings */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #3a3a4f; /* Separator for heading */
+    padding-bottom: 0.5rem;
+}
+
+.chart-container {
+    border: 1px solid #3a3a4f; /* Updated border color */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background-color: #1f1f30; /* Darker chart container */
+    border-radius: 6px;
+}
+
+.chart-container p {
+    color: #c0c0c0; /* Lighter text for chart placeholders */
+    font-size: 1.1rem;
+}
+
+#activity-log {
+    background: #1f1f30; /* Darker log background */
+    color: #d0d0d0; /* Lighter log text */
+    padding: 1rem;
+    border-radius: 6px;
+    max-height: 350px; /* Increased height */
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid #3a3a4f; /* Added border */
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; /* Monospaced font for logs */
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #162238; /* Match header start color */
+    color: #a0a0a0; /* Softer footer text color */
+    margin-top: 2rem;
+    border-top: 1px solid #2a2a3f; /* Border for definition */
+}
+
+#bot-status, #last-update {
+    font-weight: bold;
+    color: #4d94ff; /* Brighter blue for status */
+}
+
+/* General link styling */
+a {
+    color: #4d94ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+} 

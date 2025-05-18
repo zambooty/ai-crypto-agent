@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Trading Bot - AI Crypto Agent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Additional styles specific to this page can go here or in style.css */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: .5rem;
+            color: #c0c0c0;
+            font-weight: 500;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 6px;
+            border: 1px solid #3a3a4f;
+            background-color: #1f1f30;
+            color: #e0e0e0;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+
+        .form-group input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+
+        .form-group .checkbox-label {
+            color: #d0d0d0;
+            font-weight: normal;
+        }
+        
+        .data-sources-group label{
+             margin-right: 1rem;
+        }
+
+        .btn-submit {
+            background-color: #4d94ff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #3a7dd8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI Crypto Agent</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Dashboard</a> | 
+            <a href="{{ url_for('build_bot_page') }}">Build a Bot</a>
+        </nav>
+    </header>
+    <main>
+        <section id="bot-builder">
+            <h2>Configure Your Trading Bot</h2>
+            <form id="bot-config-form">
+                <div class="form-group">
+                    <label for="bot-name">Bot Name:</label>
+                    <input type="text" id="bot-name" name="bot_name" placeholder="e.g., My ETH Bot" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cryptocurrency">Cryptocurrency:</label>
+                    <select id="cryptocurrency" name="cryptocurrency">
+                        <option value="BTC">Bitcoin (BTC)</option>
+                        <option value="ETH">Ethereum (ETH)</option>
+                        <option value="SOL">Solana (SOL)</option>
+                        <option value="DOGE">Dogecoin (DOGE)</option>
+                        <!-- Add more currencies as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Data Sources for Web Scraping:</label>
+                    <div class="data-sources-group">
+                        <input type="checkbox" id="source-cointelegraph" name="data_sources" value="cointelegraph">
+                        <label for="source-cointelegraph" class="checkbox-label">Cointelegraph News</label>
+                        <br>
+                        <input type="checkbox" id="source-coindesk" name="data_sources" value="coindesk">
+                        <label for="source-coindesk" class="checkbox-label">CoinDesk News</label>
+                        <br>
+                        <input type="checkbox" id="source-coinmarketcal" name="data_sources" value="coinmarketcal">
+                        <label for="source-coinmarketcal" class="checkbox-label">CoinMarketCal Events</label>
+                        <br>
+                        <input type="checkbox" id="source-twitter" name="data_sources" value="twitter">
+                        <label for="source-twitter" class="checkbox-label">Twitter/X Sentiment (Placeholder)</label>
+                        <!-- Add more sources as needed -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="scraping-interval">Scraping Interval (minutes):</label>
+                    <input type="number" id="scraping-interval" name="scraping_interval" value="60" min="5">
+                </div>
+                
+                <div class="form-group">
+                    <label for="trading-strategy">Trading Strategy (Placeholder):</label>
+                    <select id="trading-strategy" name="trading_strategy">
+                        <option value="simple_ma">Simple Moving Average Crossover</option>
+                        <option value="rsi">RSI Momentum</option>
+                        <!-- Add more strategies later -->
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Create and Launch Bot</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 AI Crypto Agent</p>
+    </footer>
+    <script>
+        // Basic script to prevent form submission for now
+        document.getElementById('bot-config-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Bot configuration submitted (demo)! Actual bot creation logic needs to be implemented.');
+            // Here you would typically send the data to the backend
+            // For example, using Fetch API:
+            // const formData = new FormData(this);
+            // fetch('/build-bot-endpoint', { // Replace with your actual endpoint
+            //     method: 'POST',
+            //     body: formData
+            // })
+            // .then(response => response.json())
+            // .then(data => console.log(data))
+            // .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html> 

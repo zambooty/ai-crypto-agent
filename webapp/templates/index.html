@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Bot Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Trading Bot Activity Dashboard</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Dashboard</a> | 
+            <a href="{{ url_for('build_bot_page') }}">Build a Bot</a>
+        </nav>
+    </header>
+    <main>
+        <section id="status-overview">
+            <h2>Current Status</h2>
+            <p>{{ message }}</p>
+            <p>Bot Status: <span id="bot-status">Idle</span></p>
+            <p>Last Update: <span id="last-update">N/A</span></p>
+        </section>
+
+        <section id="charts">
+            <h2>Performance Charts (Placeholder)</h2>
+            <div class="chart-container">
+                <p>Portfolio Value Over Time</p>
+            </div>
+            <div class="chart-container">
+                <p>Recent Trades</p>
+            </div>
+        </section>
+
+        <section id="logs">
+            <h2>Activity Log (Placeholder)</h2>
+            <pre id="activity-log">
+No activity yet.
+            </pre>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 AI Crypto Agent</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
